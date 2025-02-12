@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "cra-template": "1.2.0",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "^3.0.1",
+    "react-type-animation": "^3.2.0",
+    "react-typed": "^2.0.12",
+    "typed.js": "^2.1.0",
+    "@babel/core": "7.19.6",
+"@babel/generator": "7.19.6",
+"@babel/compat-data": "7.19.4",
+"@babel/helper-compilation-targets": "7.19.3",
+"@babel/helper-create-class-features-plugin":"7.19.0",
+"@babel/helper-module-transforms":"7.19.6"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "eslint-plugin-react": "^7.37.4",
+    "web-vitals": "^4.2.4"
+  }
+}
