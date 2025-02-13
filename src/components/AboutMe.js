@@ -6,14 +6,16 @@ const AboutMe = () => {
     const el = useRef(null);
     const el2 = useRef(null);
     const el3 = useRef(null);
+    const el4 = useRef(null);
     const typed = useRef(null);
     const typed2 = useRef(null);
     const typed3 = useRef(null);
+    const typed4 = useRef(null);
 
     useEffect(() => {
         typed.current = new Typed(el.current, {
-                strings: ["", "Nickname: Misha"],
-                typeSpeed: 50,
+                strings: ["", "Name: Misha Chee Jia Hua"],
+                typeSpeed: 10,
             showCursor: false,
             onStringTyped: () => {
                 typed.current.stop(); 
@@ -28,7 +30,7 @@ const AboutMe = () => {
     useEffect(() => {
         typed2.current = new Typed(el2.current, {
           strings: ["","Age: 25"],
-            typeSpeed: 50,
+            typeSpeed: 10,
             showCursor: false,
             onStringTyped: () => typed2.current.stop(),
             onComplete: () => setDialogue(3)
@@ -37,10 +39,10 @@ const AboutMe = () => {
           typed2.current.destroy();
         };
     }, []);
-    
+
     useEffect(() => {
         typed3.current = new Typed(el3.current, {
-          strings: ["","Detailed-oriented software developer, age 25, looking to be a game programmer at your company. Always seeking to perform beyond basic requirements and to work on meaningful and impactful projects to gain knowledge while making a difference. Wishing to use innovative problem-solving skills and contribute fresh ideas to break boundaries with your company. Loves to read, play video games and play any sports!"],
+          strings: ["","Roles: QA Engineer, Frontend Developer, Game Programmer"],
             typeSpeed: 10,
             showCursor: false,
             onStringTyped: () => typed3.current.stop(),
@@ -48,6 +50,19 @@ const AboutMe = () => {
         });
         return () => {
           typed3.current.destroy();
+        };
+    }, []);
+    
+    useEffect(() => {
+        typed4.current = new Typed(el4.current, {
+          strings: ["","QA Engineer by day, aspiring Frontend Wizard by night! With two years of testing experience, I’ve broken (and fixed) more code than I can count. Now, I’m on a mission to turn those debugging skills into dazzling UI creations using React.js.", "When I’m not coding, I’m probably supporting my duelists in game, perfecting my frisbee throws, or planning my adventure with my favourite people. If you need someone who can build, test, and break things (in the best way possible)—I’m your person!"],
+            typeSpeed: 10,
+            showCursor: false,
+            onStringTyped: () => typed4.current.stop(),
+            onComplete: () => setDialogue(5)
+        });
+        return () => {
+          typed4.current.destroy();
         };
     }, []);
     
@@ -66,6 +81,9 @@ const AboutMe = () => {
             case 3:
                 typed3.current.start();
                 break;
+            case 4:
+                typed4.current.start();
+                break;
         }
     }
 
@@ -81,9 +99,14 @@ const AboutMe = () => {
                     <p ref={el} /> 
                     <p ref={el2} />
                     <p ref={el3} />
-                    {dialogue != 4 ? <button id="next-button">Next {">"}</button> : null}
+                    <p ref={el4} />
+                    {dialogue != 5 ? <button id="next-button">Next {">"}</button> : null}
                 </div>
             </div>
+            <div class="sparkles" style={{bottom: "30%", left: "5%"}} />
+            <div class="sparkles" style={{ bottom: "80%", right: "5%" }} />
+            <img class="clouds" style={{ bottom: "80%", left: "-15%" }} src={require('../assets/cloud2.png')} />
+            <div class="divider" />
         </div>
     )
 }

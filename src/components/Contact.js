@@ -53,6 +53,8 @@ const Contact = () => {
                     <a id="linkedin"  href="https://www.linkedin.com/in/misha-chee" target="_blank"/>
                 </div>
             </div>
+            <img class="clouds" style={{ bottom: "75%", left: "5%" }} src={require('../assets/cloud1.png')}/>
+            <img class="clouds" style={{ bottom: "15%", left: "73%" }} src={require('../assets/cloud2.png')}/>
         </div>
     )
 }

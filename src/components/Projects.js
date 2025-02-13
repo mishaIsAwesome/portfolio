@@ -4,6 +4,7 @@ const Projects = () => {
 
     const [code, setCode] = useState("");
     const [blinking, setBlinking] = useState(false);
+    const [dialogue, setDialogue] = useState(1);
     const projectCodes = ["143", "125"];
 
     const enterCode = async (num) => {
@@ -19,10 +20,12 @@ const Projects = () => {
                 setCode("ERR");
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 setCode("");
+                setDialogue(2);
             } else {
                 setCode("YES");
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 setCode("");
+                setDialogue(0);
             }
         }
     }
@@ -42,6 +45,12 @@ const Projects = () => {
                     <div id="num-8" class="numpad" onClick={() => enterCode("8")}></div>
                     <div id="num-9" class="numpad" onClick={() => enterCode("9")}></div>
                 </div>
+            </div>
+            {dialogue == 1 ? <p id="vending-instructions-1" class="dialogue">This is a project vending machine! You can dispense my projects from here</p> : null}
+            {dialogue == 2 ? <p id="vending-instructions-1" class="dialogue">Enter the Project Code to view it!</p> : null}
+            <div id="background-clouds">
+                <img src={require('../assets/cloud2.png')} />
+                <img src={require('../assets/cloud2.png')} />
             </div>
         </div>
     )

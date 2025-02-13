@@ -13,7 +13,7 @@ const Resume = () => {
             <h1>RESUME GATCHA</h1>
             <div id="gatcha-container">
                 <div class="gatcha-section" >
-                    <p id="gatcha-instructions-1" class="gatcha-text" onAnimationEnd={() => setNextDialogue(true)}>Random resumes up for grabs!</p> 
+                    <p id="gatcha-instructions-1" class="dialogue" onAnimationEnd={() => setNextDialogue(true)}>Random resumes up for grabs!</p> 
                 </div>
                 <div class="gatcha-section">
                     <div class={opened ? "gatcha open" : "gatcha closed"} onClick={gatchaClick}>
@@ -27,7 +27,7 @@ const Resume = () => {
                     </div>
                 </div>
                 <div  class="gatcha-section">
-                    {nextDialogue ? <p id="gatcha-instructions-2" class="gatcha-text">Click to see which you'll get!</p> : null}
+                    {nextDialogue ? <p id="gatcha-instructions-2" class="dialogue">Click to see which you'll get!</p> : null}
                 </div>
                 {opened ? (
                     <>
@@ -42,7 +42,7 @@ const Resume = () => {
                             <div class="sparkles" style={{ bottom: "40%", right: "20%" }} />
                     </>) : null}
             </div>
-            
+            <div class="divider" />
         </div>
     )
 }

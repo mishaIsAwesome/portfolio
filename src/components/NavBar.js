@@ -5,7 +5,6 @@ export default function NavBar() {
     return (
         <Navbar expand="lg" className="nav-container">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav class="nav">
             <Nav.Link href="#aboutMe" class="nav-link">ABOUT ME</Nav.Link>
