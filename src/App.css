@@ -127,7 +127,7 @@ h1 {
   100% {translate: none}
 }
 
-#arrow-down, .home h1 {
+#arrow-down, .home h1, .project-item {
   animation-name: slow-bounce;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -243,6 +243,34 @@ p {
   background-image: url(./assets/vending-machine1.png);
 }
 
+#project-items-container {
+  width: 40%;
+  aspect-ratio: 2/1;
+  position: absolute;
+  bottom: 36%;
+  left: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding: 1%;
+}
+
+.project-item{
+  display: table;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-icon{
+  width: 70%;
+}
+
+#project-item-title{
+  background-color: #8C8C8C;
+  box-shadow: 1vmin 0.8vmin 1vmin #00000040;
+  margin: 0;
+}
+
 #numpad-screen {
   width: 11.3%;
   aspect-ratio: 3/1;
@@ -271,7 +299,7 @@ p {
 
 .blinking {
   animation: blink;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 #numpad-container {

@@ -26,6 +26,9 @@ const Projects = () => {
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 setCode("");
                 setDialogue(0);
+                switch (newCode) {
+                    case "125": window.open('https://github.com/mishaIsAwesome/react-router-budget', '_blank');
+                }
             }
         }
     }
@@ -33,6 +36,12 @@ const Projects = () => {
     return(
         <div id="projects" class="section">
             <div id="projects-container">
+                <div id="project-items-container">
+                    <div class="project-item" onClick={() => setDialogue(2)} >
+                        <img class="project-icon" src={require('../assets/budget-app.png')} />
+                        <p id="project-item-title">125: React Budget App</p>
+                    </div>
+                </div>
                 <div id="numpad-screen" class={blinking ? "blinking" : ""}>{code}</div>
                 <div id="numpad-container">
                     <div id="num-1" class="numpad" onClick={() => enterCode("1")}></div>
