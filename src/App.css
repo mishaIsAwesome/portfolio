@@ -253,6 +253,8 @@ p {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   padding: 1%;
+  align-items: end;
+  gap: 5%;
 }
 
 .project-item{
@@ -269,6 +271,7 @@ p {
   background-color: #8C8C8C;
   box-shadow: 1vmin 0.8vmin 1vmin #00000040;
   margin: 0;
+  padding: 0;
 }
 
 #numpad-screen {

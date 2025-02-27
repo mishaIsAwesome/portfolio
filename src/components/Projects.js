@@ -28,6 +28,7 @@ const Projects = () => {
                 setDialogue(0);
                 switch (newCode) {
                     case "125": window.open('https://github.com/mishaIsAwesome/react-router-budget', '_blank');
+                    case "143": window.open('https://github.com/mishaIsAwesome/rpgSlimeAdventure', '_blank');
                 }
             }
         }
@@ -40,6 +41,10 @@ const Projects = () => {
                     <div class="project-item" onClick={() => setDialogue(2)} >
                         <img class="project-icon" src={require('../assets/budget-app.png')} />
                         <p id="project-item-title">125: React Budget App</p>
+                    </div>
+                    <div class="project-item" onClick={() => setDialogue(2)} >
+                        <img class="project-icon" src={require('../assets/slime.png')} />
+                        <p id="project-item-title">143: Unity RPG Game</p>
                     </div>
                 </div>
                 <div id="numpad-screen" class={blinking ? "blinking" : ""}>{code}</div>
